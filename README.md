@@ -17,25 +17,23 @@ const snailpace = require('snailpace');
 
 snailpace({
   duration: 3600000,
-  distance: 10000,
-  output: 'pace'
+  distance: 5000
 });
-//=> 00:05:00.000 (time per km)
+//=> { days: 0, hours: 0, minutes: 12, seconds: 0, milliseconds: 0 } (time per km)
 
 snailpace({
   duration: 3600000,
   distance: 10000,
-  output: 'pace',
   metric: false
 });
-//=> 00:05:00.000 (time per mi)
+//=> { days: 0, hours: 0, minutes: 19, seconds: 18, milliseconds: 727 } (time per mi)
 
 snailpace({
   duration: 3600000,
   distance: 10000,
   output: 'speed'
 });
-//=> 10 (mk/h)
+//=> 5 (km/h)
 
 snailpace({
   duration: 3600000,
@@ -43,7 +41,7 @@ snailpace({
   output: 'speed',
   metric: false
 });
-//=> 6.2137119223733395 (mi/h)
+//=> 3.1068559611866697 (mi/h)
 ```
 
 

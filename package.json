@@ -12,7 +12,8 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "standard && ava"
+    "test": "standard && ava",
+    "prepublish": "npm test"
   },
   "files": [
     "index.js",

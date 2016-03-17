@@ -47,7 +47,7 @@ test('duration & distance', (t) => {
     hours: 0,
     minutes: 12,
     seconds: 0,
-    milliseconds: 0 
+    milliseconds: 0
   })
 })
 
@@ -61,7 +61,7 @@ test('duration, distance & pace', (t) => {
     hours: 0,
     minutes: 12,
     seconds: 0,
-    milliseconds: 0 
+    milliseconds: 0
   })
 })
 
@@ -75,7 +75,7 @@ test('duration, distance & metric', (t) => {
     hours: 0,
     minutes: 12,
     seconds: 0,
-    milliseconds: 0 
+    milliseconds: 0
   })
 })
 
@@ -90,7 +90,7 @@ test('duration, distance, pace & metric', (t) => {
     hours: 0,
     minutes: 12,
     seconds: 0,
-    milliseconds: 0 
+    milliseconds: 0
   })
 })
 
@@ -104,7 +104,7 @@ test('duration, distance & not metric', (t) => {
     hours: 0,
     minutes: 19,
     seconds: 18,
-    milliseconds: 727 
+    milliseconds: 727
   })
 })
 
@@ -119,7 +119,7 @@ test('duration, distance, pace & not metric', (t) => {
     hours: 0,
     minutes: 19,
     seconds: 18,
-    milliseconds: 727 
+    milliseconds: 727
   })
 })
 
