@@ -1,7 +1,7 @@
 {
   "name": "snailpace",
   "version": "1.0.0",
-  "description": "Calculate pace or speed for a given duration and distance",
+  "description": "Calculate pace for a given time and distance",
   "license": "MIT",
   "repository": "Zertz/snailpace",
   "author": {
@@ -20,14 +20,10 @@
     "LICENSE"
   ],
   "keywords": [
-    "pace",
-    "speed",
-    "duration",
-    "distance"
+    "pace"
   ],
   "dependencies": {
-    "km-to-mi": "~1.0.0",
-    "parse-ms": "~1.0.1"
+    "km-to-mi": "~1.0.0"
   },
   "devDependencies": {
     "ava": "^0.12.0",

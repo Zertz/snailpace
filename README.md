@@ -1,6 +1,6 @@
 # snailpace [![Build Status](https://travis-ci.org/Zertz/snailpace.svg?branch=master)](https://travis-ci.org/Zertz/snailpace) [![NPM version](https://badge.fury.io/js/snailpace.png)](http://badge.fury.io/js/snailpace)
 
-> Calculate pace or speed for a given duration and distance
+> Calculate pace for a given time and distance
 
 
 ## Install
@@ -16,34 +16,28 @@ $ npm install --save snailpace
 const snailpace = require('snailpace');
 
 snailpace({
-  duration: 3600000,
+  time: 3600000,
   distance: 5000
 });
-//=> { days: 0, hours: 0, minutes: 12, seconds: 0, milliseconds: 0 } (time per km)
+//=> 12 (min/km)
 
 snailpace({
-  duration: 3600000,
-  distance: 10000,
+  time: 3600000,
+  distance: 5000,
   metric: false
 });
-//=> { days: 0, hours: 0, minutes: 19, seconds: 18, milliseconds: 727 } (time per mi)
+//=> 19.312128 (min/mi)
 
 snailpace({
-  duration: 3600000,
-  distance: 10000,
-  output: 'speed'
+  time: 3600000,
+  distance: 5000,
+  timeDivider: 1000,
+  distanceDivider: 1
 });
-//=> 5 (km/h)
-
-snailpace({
-  duration: 3600000,
-  distance: 10000,
-  output: 'speed',
-  metric: false
-});
-//=> 3.1068559611866697 (mi/h)
+//=> 0.72 (s/m)
 ```
 
+> Protip: format with moment.duration()
 
 ## API
 
@@ -51,11 +45,11 @@ snailpace({
 
 #### options
 
-##### duration
+##### time
 
 Type: `number`
 
-Duration in milliseconds
+Time in milliseconds
 
 ##### distance
 
@@ -63,16 +57,26 @@ Type: `number`
 
 Distance in meters
 
-##### output
+#### timeDivider
 
-Type: `string`
-Default: `'pace'`
+Type: `number`
 
-Possible values: `'pace'`, `'speed'`
+Default: `60000` (1 minute)
+
+Calculate pace in this unit of time per distance
+
+#### distanceDivider
+
+Type: `number`
+
+Default: `1000` (1 km)
+
+Calculate pace in this unit of distance per time
 
 ##### metric
 
 Type: `boolean`
+
 Default: `true`
 
 
