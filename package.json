@@ -1,6 +1,6 @@
 {
   "name": "snailpace",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Calculate pace for a given time and distance",
   "license": "MIT",
   "repository": "Zertz/snailpace",
