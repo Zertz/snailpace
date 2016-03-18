@@ -37,7 +37,7 @@ snailpace({
 //=> 0.72 (s/m)
 ```
 
-> Protip: use with moment.duration(snailpace({ ... )).format()
+> Protip: use with moment.utc(snailpace({ ... )).format()
 
 ## API
 
