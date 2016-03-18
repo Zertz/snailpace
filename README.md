@@ -19,14 +19,14 @@ snailpace({
   time: 3600000,
   distance: 5000
 });
-//=> 12 (min/km)
+//=> 720000 (ms/km)
 
 snailpace({
   time: 3600000,
   distance: 5000,
   metric: false
 });
-//=> 19.312128 (min/mi)
+//=> 1158727.68 (ms/mi)
 
 snailpace({
   time: 3600000,
@@ -37,7 +37,7 @@ snailpace({
 //=> 0.72 (s/m)
 ```
 
-> Protip: format with moment.duration()
+> Protip: use with moment.duration(snailpace({ ... )).format()
 
 ## API
 
@@ -61,7 +61,7 @@ Distance in meters
 
 Type: `number`
 
-Default: `60000` (1 minute)
+Default: `1` (1 ms)
 
 Calculate pace in this unit of time per distance
 

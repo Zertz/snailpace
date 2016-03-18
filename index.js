@@ -10,7 +10,7 @@ module.exports = function (opts) {
   }
 
   opts.distanceDivider = opts.distanceDivider || 1000
-  opts.timeDivider = opts.timeDivider || 60000
+  opts.timeDivider = opts.timeDivider || 1
 
   var distance = opts.metric ? opts.distance / opts.distanceDivider : kmToMi(opts.distance / opts.distanceDivider)
   var time = opts.time / opts.timeDivider

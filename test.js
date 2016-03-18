@@ -17,19 +17,19 @@ test('only distance', (t) => {
   })))
 })
 
-test('min/km', (t) => {
+test('ms/km', (t) => {
   t.same(snailpace({
     time: 3600000,
     distance: 5000
-  }), 12)
+  }), 720000)
 })
 
-test('min/mi', (t) => {
+test('ms/mi', (t) => {
   t.same(snailpace({
     time: 3600000,
     distance: 5000,
     metric: false
-  }), 19.312128)
+  }), 1158727.68)
 })
 
 test('s/km', (t) => {
@@ -40,12 +40,12 @@ test('s/km', (t) => {
   }), 720)
 })
 
-test('min/100m', (t) => {
+test('ms/100m', (t) => {
   t.same(snailpace({
     time: 3600000,
     distance: 5000,
     distanceDivider: 100
-  }), 1.2)
+  }), 72000)
 })
 
 test('s/m', (t) => {
